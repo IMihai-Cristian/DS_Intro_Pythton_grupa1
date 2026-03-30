@@ -134,6 +134,7 @@ list_m7 = [1, 2.5, 'Ana', '22', False, None]
 # print(list_m7)
 
 # pop
+print(list_m7.pop())
 # print(list_m7.pop(1))
 
 #clear

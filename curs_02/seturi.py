@@ -1,4 +1,4 @@
-""" seturile sunt colectii de obiecte si sunt imutabile si neordonate (deci neindexabile). Nu permit elemente duplicate"""
+""" seturile sunt colectii de obiecte si sunt mutabile si neordonate (deci neindexabile). Nu permit elemente duplicate"""
 
 var_set = set()
 # print({None, 'aaaa', None, 22.3, 55})
@@ -74,4 +74,8 @@ var_set_1.pop() # elimina un element la intamplare (nu stim care ptr ca setul es
 
 # CLEAR
 var_set_1.clear() # goleste tot setul
-print(var_set_1)
+# print(var_set_1)
+
+# var_string = "The Inquisitor must meet Varric on top of Skyhold's battlements to be introduced."
+# patches = [[4, 14, "Conquistador"], [25, 31, "King"], [42, 49, "Palace"]]
+# print(var_string.replace(var_string[patches[0][0]:patches[0][1]], patches[0][2]).replace(var_string[patches[1][0]:patches[0][1]], patches[1][2]))
