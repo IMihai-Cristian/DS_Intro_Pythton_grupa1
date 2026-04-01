@@ -1,0 +1,7 @@
+1. Cu ajutorul celor invatate in ultima saptamana la curs se va realiza un calculator, astfel:
+- calculatorul detine cifre de la 0 la 9,
+- semnele matematice cu ajutorul carora se vor putea realiza operatii matematice sunt urmatoarele: + (adunare), - (scadere), / (impartire), * (inmultire)
+- pe langa cifrele amintite anterior si semnele matematice se va putea sterge cu ajutorul litere C
+- toate operatiile presupun interactiunea cu utilizatorul (functii de tip input)
+
+2. Incercarea de implementare while pentru cazurile cu nr de la loops
