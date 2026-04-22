@@ -112,7 +112,27 @@ number_list_4 = ["Par" if x % 2 == 0 else 'Impar' for x in range(20)]
 square_dict = {}
 for num in range(1, 11):
     square_dict[num] = num * num
-print(square_dict, 115)
+# print(square_dict, 115)
 
 square_comp = {num: num * num for num in range(1, 11)}
-print(square_comp, 118)
+# print(square_comp, 118)
+
+""" any si all """
+
+a = [41, 45]
+b = [20, 41]
+c = [45, 41]
+
+# print(any(i in a for i in b)) # any verifica daca cel putin un element din b se gaseste in a
+# print(all(i in a for i in b)) # all verifica daca toate elementele din b se gasesc in a
+# print(all(i in a for i in c)) # all verifica daca toate elementele din b se gasesc in a
+
+""" eval """
+
+# value = eval('2 + 2')
+# print(value)
+
+# value_2 = '{1: 2}'
+# print(value_2, type(value_2))
+# value_3 = eval('{1: 2}')
+# print(value_3, type(value_3))

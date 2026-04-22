@@ -97,14 +97,43 @@ obj_1 = Dog()
 
 
 #--------------------
+# class Stack:
+#
+#     def __init__(self, val1):
+#         self.__stack_list = []
+#         self.val1 = val1
+#
+#     def push(self):
+#         self.__stack_list.append(self.val1)
+#         print(self.__stack_list)
+#
+#     def pop(self):
+#         valoare = self.__stack_list[-1]
+#         del self.__stack_list[-1]
+#         print(self.__stack_list)
+#         return valoare
+#
+# obj_stiva = Stack(1)
+# print(obj_stiva)
+# obj_stiva_2 = Stack(5)
+# obj_stiva_3 = Stack(10)
+#
+# # print(obj_stiva, obj_stiva_2, obj_stiva_3)
+# obj_stiva.push()
+# obj_stiva_2.push()
+# obj_stiva_3.push()
+
+#--------------------
+
 class Stack:
 
-    def __init__(self, val1):
+    def __init__(self, *args):
         self.__stack_list = []
-        self.val1 = val1
+        self.val1 = args
 
     def push(self):
-        self.__stack_list.append(self.val1)
+        for elem in self.val1:
+            self.__stack_list.append(elem)
         print(self.__stack_list)
 
     def pop(self):
@@ -113,14 +142,5 @@ class Stack:
         print(self.__stack_list)
         return valoare
 
-obj_stiva = Stack(1)
-obj_stiva_2 = Stack(5)
-obj_stiva_3 = Stack(10)
-
-# print(obj_stiva, obj_stiva_2, obj_stiva_3)
+obj_stiva = Stack(1, 2, 3, 5, 8)
 obj_stiva.push()
-obj_stiva_2.push()
-obj_stiva_3.push()
-
-
-

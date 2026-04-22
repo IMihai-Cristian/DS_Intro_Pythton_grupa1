@@ -21,3 +21,5 @@ print(pop())
 print(pop())
 
 print(stack_list)
+
+
