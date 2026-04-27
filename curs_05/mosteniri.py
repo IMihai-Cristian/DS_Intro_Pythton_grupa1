@@ -1,3 +1,5 @@
+from abc import ABC
+
 
 # class Example:
 #
@@ -111,22 +113,147 @@
 
 # -----------------------------------------
 
+# class SuperClasa:
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def __str__(self):
+#         return f'Numele meu este {self.name}'
+#
+#
+# class SubClasa(SuperClasa):
+#     pass
+#     # def __init__(self):
+#     #     pass
+#
+#     def __str__(self):
+#         return  f'Print {self.name}'
+#
+# # object_1 = SuperClasa('Mihai')
+# # print(object_1)
+#
+# object_1 = SubClasa('Mihai')
+# print(object_1)
+
+# -----------------------------------------
+
+
+# class SuperClasa:
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def __str__(self):
+#         return f'Numele meu este {self.name}'
+#
+#
+# class SubClasa(SuperClasa):
+#     # pass
+#     def __init__(self, name):
+#         # SuperClasa.__init__(self, name)
+#         # super(SuperClasa, self).__init__()           # cand am mostenire multipla
+#         super().__init__(name)                             # bun doar la o singura mostenire
+#         self.test = 'nume'
+#
+#     def __str__(self):
+#         return  f'Print {self.test} {self.name}'
+#
+# # object_1 = SuperClasa('Mihai')
+# # print(object_1)
+#
+# object_1 = SubClasa('Mihai')
+# print(object_1)
+
+
+# -----------------------------------------
+
+# class SuperClasa:
+#
+#     def __init__(self, name='Mihai'):
+#         self.name = name
+#
+#     def __str__(self):
+#         return f'Numele meu este {self.name}'
+#
+#
+# class SubClasa(SuperClasa):
+#
+#     def __init__(self, aaa='Cristian'):
+#         super().__init__(aaa)
+#
+#     def __str__(self):
+#         return  f'Print {self.name}'
+#
+# object_1 = SubClasa('Ionel')
+# print(object_1)
+
+
+# --------
+
+
+# class SuperClasa:
+#
+#     super_variabila = 'super'
+#     sub_variabila = 'sub_parinte'
+#
+#     def __init__(self, name='Mihai'):
+#         self.name = name
+#
+#     def __str__(self):
+#         return f'Numele meu este {self.name}'
+#
+#
+# class SubClasa(SuperClasa):
+#
+#     sub_variabila = 'sub'
+#     super_variabila = 'super_copil'
+#
+#     def __init__(self, aaa='Cristian'):
+#         super().__init__(aaa)
+#
+#     def __str__(self):
+#         return f'Print {self.name}'
+#
+#
+# obj_1 = SubClasa()
+# print(obj_1.sub_variabila)
+# print(obj_1.super_variabila)
+
+
+# ---------------------------------------------------------------------
+
+
 class SuperClasa:
 
-    def __init__(self, name):
+    super_variabila = 'super'
+    sub_variabila = 'sub_parinte'
+
+    def __init__(self, name='Mihai'):
         self.name = name
 
     def __str__(self):
         return f'Numele meu este {self.name}'
 
 
-class SubClasa(SuperClasa):
-    pass
-    # def __init__(self):
-    #     pass
+class Mijloc:
 
-# object_1 = SuperClasa('Mihai')
-# print(object_1)
+    variabila_mijloc = 10
+    super_variabila = 'mijloc'
 
-object_1 = SubClasa('Mihai')
-print(object_1)
+
+class SubClasa(SuperClasa, Mijloc): # aici am mostenire multipla
+
+    sub_variabila = 'sub'
+    super_variabila = 'super_copil'
+
+    def __init__(self, aaa='Cristian'):
+        super().__init__(aaa)
+
+    def __str__(self):
+        return f'Print {self.name}'
+
+
+obj_1 = SubClasa()
+print(obj_1.super_variabila)
+print(obj_1.variabila_mijloc)
